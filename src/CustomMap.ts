@@ -1,8 +1,10 @@
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     lng: number;
   };
+  content(): string;
+  color?: string;
 }
 export class CutomMap {
   private googleMap: google.maps.Map;
@@ -27,7 +29,7 @@ export class CutomMap {
     });
    marker.addListener("click", () => {
     const infoWindow = new google.maps.InfoWindow({
-      content: "Hi, I'm Riya",
+      content: mappable.content(),
     });
     infoWindow.open(this.googleMap, marker);
    });

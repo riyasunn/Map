@@ -3,7 +3,7 @@ import { Company } from './Company';
 import { CutomMap } from "./CustomMap";
 
 const user = new User();
-const company = new Company();
+const company = new Company("Hi, Riya works in our company as an software developer");
 // console.log(user);
 // console.log(company);
 
